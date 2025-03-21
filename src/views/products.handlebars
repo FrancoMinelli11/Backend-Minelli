@@ -1,0 +1,11 @@
+<div>
+    {{#each products}}
+        <div>
+            <h2>{{name}}</h2>
+            <a href="/product/{{code}}">Ver detalle</a>
+            <form method="post" action="/product/{{_id}}?_method=delete">
+            <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    {{/each}}
+</div>
