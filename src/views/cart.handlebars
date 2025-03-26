@@ -1,0 +1,9 @@
+<div>
+    <h1>Carrito</h1>
+    {{#each cart}}
+    <div class="product">
+        {{product.title}} - ${{product.price}} - Cantidad a llevar: {{quantity}} - {{product.code}} - <img src="/img/{{product.thumbnail}}" alt="{{product.title}}">
+    </div>
+    {{/each}}
+    Total del carrito: ${{total}}
+</div>

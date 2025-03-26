@@ -1,0 +1,9 @@
+    <h1>Productos</h1>
+    {{#each products}}
+<div class="product">
+    {{title}} - ${{price}} - {{code}} - <img src="/img/{{thumbnail}}" alt="{{title}}"> 
+    <form action="/cart/67e440aec2fd70873fa80f30?_method=PUT" method="post">
+    <button type="submit">Agregar</button>
+    </form>
+    </div>
+    {{/each}}
