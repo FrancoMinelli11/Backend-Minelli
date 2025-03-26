@@ -1,9 +1,15 @@
-    <h1>Productos</h1>
-    {{#each products}}
+<h1>Productos</h1>
+{{#each products}}
 <div class="product">
-    {{title}} - ${{price}} - {{code}} - <img src="/img/{{thumbnail}}" alt="{{title}}"> 
-    <form action="/cart/67e440aec2fd70873fa80f30?_method=PUT" method="post">
-    <button type="submit">Agregar</button>
+    <h2>{{title}}</h2>
+    <p>Precio: ${{price}}</p>
+    <p>Código de producto: {{code}}</p>
+    <img src="/img/{{thumbnail}}" alt="{{title}}"> 
+
+    <form action="/cart/67e453f3ba3f7f03109b7bd9?_method=PUT" method="post">
+        <input type="hidden" name="product" value="{{_id}}">
+        <input type="number" name="quantity" value="1" min="1"> 
+        <button type="submit">Agregar</button>
     </form>
-    </div>
-    {{/each}}
+</div>
+{{/each}}
